@@ -1,0 +1,450 @@
+{
+  "scenario": "hold-until-dawn",
+  "nexusId": "HN",
+  "nodes": [
+    {
+      "id": "HN",
+      "kind": "host-reserve",
+      "sectorId": null,
+      "capacity": null
+    },
+    {
+      "id": "EWOP_1_APP",
+      "kind": "approach",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "EWOP_1_CLM",
+      "kind": "climbing",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "EWOP_2_APP",
+      "kind": "approach",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "EWOP_2_CLM",
+      "kind": "climbing",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "EWOP_3_APP",
+      "kind": "approach",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "EWOP_3_CLM",
+      "kind": "climbing",
+      "sectorId": "east-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_1_APP",
+      "kind": "approach",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_1_CLM",
+      "kind": "climbing",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_2_APP",
+      "kind": "approach",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_2_CLM",
+      "kind": "climbing",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_3_APP",
+      "kind": "approach",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "WWOP_3_CLM",
+      "kind": "climbing",
+      "sectorId": "west-wall",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_1_APP",
+      "kind": "approach",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_1_CLM",
+      "kind": "climbing",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_2_APP",
+      "kind": "approach",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_2_CLM",
+      "kind": "climbing",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_3_APP",
+      "kind": "approach",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_3_CLM",
+      "kind": "climbing",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_4_APP",
+      "kind": "approach",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "GHOP_4_CLM",
+      "kind": "climbing",
+      "sectorId": "gatehouse",
+      "capacity": null
+    },
+    {
+      "id": "RDOP_1_APP",
+      "kind": "approach",
+      "sectorId": "residential",
+      "capacity": null
+    },
+    {
+      "id": "RDOP_1_CLM",
+      "kind": "climbing",
+      "sectorId": "residential",
+      "capacity": null
+    },
+    {
+      "id": "RDOP_2_APP",
+      "kind": "approach",
+      "sectorId": "residential",
+      "capacity": null
+    },
+    {
+      "id": "RDOP_2_CLM",
+      "kind": "climbing",
+      "sectorId": "residential",
+      "capacity": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "HN",
+      "to": "EWOP_1_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_1_APP",
+      "to": "EWOP_1_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_1_CLM",
+      "to": "EWOP_1",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "EWOP_2_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_2_APP",
+      "to": "EWOP_2_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_2_CLM",
+      "to": "EWOP_2",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "EWOP_3_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_3_APP",
+      "to": "EWOP_3_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "EWOP_3_CLM",
+      "to": "EWOP_3",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "WWOP_1_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_1_APP",
+      "to": "WWOP_1_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_1_CLM",
+      "to": "WWOP_1",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "WWOP_2_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_2_APP",
+      "to": "WWOP_2_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_2_CLM",
+      "to": "WWOP_2",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "WWOP_3_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_3_APP",
+      "to": "WWOP_3_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "WWOP_3_CLM",
+      "to": "WWOP_3",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "GHOP_1_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_1_APP",
+      "to": "GHOP_1_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_1_CLM",
+      "to": "GHOP_1",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "GHOP_2_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_2_APP",
+      "to": "GHOP_2_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_2_CLM",
+      "to": "GHOP_2",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "GHOP_3_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_3_APP",
+      "to": "GHOP_3_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_3_CLM",
+      "to": "GHOP_3",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "GHOP_4_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_4_APP",
+      "to": "GHOP_4_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "GHOP_4_CLM",
+      "to": "GHOP_4",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "RDOP_1_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "RDOP_1_APP",
+      "to": "RDOP_1_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "RDOP_1_CLM",
+      "to": "RDOP_1",
+      "kind": "assault-entry",
+      "bidirectional": true
+    },
+    {
+      "from": "HN",
+      "to": "RDOP_2_APP",
+      "kind": "exterior-approach",
+      "bidirectional": true
+    },
+    {
+      "from": "RDOP_2_APP",
+      "to": "RDOP_2_CLM",
+      "kind": "climb",
+      "bidirectional": true
+    },
+    {
+      "from": "RDOP_2_CLM",
+      "to": "RDOP_2",
+      "kind": "assault-entry",
+      "bidirectional": true
+    }
+  ],
+  "innerAccessCandidates": [
+    {
+      "sectorId": "east-wall",
+      "outerPositionIds": [
+        "EWOP_1",
+        "EWOP_2",
+        "EWOP_3"
+      ],
+      "innerPositionIds": [
+        "EWIP_1",
+        "EWIP_2",
+        "EWIP_3",
+        "EWIP_4",
+        "EWIP_5"
+      ],
+      "status": "unresolved-access-edges",
+      "note": "Physical entry edges require a later layout ruling; do not treat all-to-all as traversable."
+    },
+    {
+      "sectorId": "west-wall",
+      "outerPositionIds": [
+        "WWOP_1",
+        "WWOP_2",
+        "WWOP_3"
+      ],
+      "innerPositionIds": [
+        "WWIP_1",
+        "WWIP_2",
+        "WWIP_3",
+        "WWIP_4",
+        "WWIP_5"
+      ],
+      "status": "unresolved-access-edges",
+      "note": "Physical entry edges require a later layout ruling; do not treat all-to-all as traversable."
+    },
+    {
+      "sectorId": "gatehouse",
+      "outerPositionIds": [
+        "GHOP_1",
+        "GHOP_2",
+        "GHOP_3",
+        "GHOP_4"
+      ],
+      "innerPositionIds": [
+        "GHIP_1",
+        "GHIP_2",
+        "GHIP_3",
+        "GHIP_4"
+      ],
+      "status": "unresolved-access-edges",
+      "note": "Physical entry edges require a later layout ruling; do not treat all-to-all as traversable."
+    },
+    {
+      "sectorId": "residential",
+      "outerPositionIds": [
+        "RDOP_1",
+        "RDOP_2"
+      ],
+      "innerPositionIds": [
+        "RDIP_1",
+        "RDIP_2",
+        "RDIP_3"
+      ],
+      "status": "unresolved-access-edges",
+      "note": "Physical entry edges require a later layout ruling; do not treat all-to-all as traversable."
+    }
+  ],
+  "dawnstoneAccess": "unresolved",
+  "notes": [
+    "Approach and climb are physical stages; neither conveys fortress control.",
+    "Exterior spaces are Host approach staging, not Coalition defensive positions.",
+    "Host reinforcement requires contiguous Host-controlled and uncontested traversable spaces from HN.",
+    "Host-controlled but contested destination cannot receive free reinforcements; stage at nearest eligible rear node.",
+    "Host assault against Coalition positions is distinct from free reinforcement and requires eligible physical access.",
+    "No independent Host muster or route-compromise system."
+  ]
+}

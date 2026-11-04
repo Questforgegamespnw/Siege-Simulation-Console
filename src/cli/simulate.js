@@ -7,5 +7,5 @@ const deployment = load('scenarios/hold-until-dawn/deployment');
 const rules = load('rules/control');
 const state = createInitialState({ fortress, deployment });
 const eastWall = state.positions.filter((p) => p.sectorId === 'east-wall' && p.countsForSectorCondition);
-console.log('Siege Simulation Console — milestone 0.5A fortress fixture (no phase resolved)');
+console.log('Siege Simulation Console — milestone 0.5B initial battlefield fixture (no phase resolved)');
 console.log(JSON.stringify(getEastWestSectorCondition(eastWall, rules.eastWestSectorConditionByHeld), null, 2));

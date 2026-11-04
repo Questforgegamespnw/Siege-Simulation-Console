@@ -396,11 +396,21 @@
       "capacity": 50,
       "countsForSectorCondition": false,
       "label": "Deep Barracks"
+    },
+    {
+      "id": "HN",
+      "sectorId": "host-nexus",
+      "zone": "host-reserve",
+      "capacity": null,
+      "countsForSectorCondition": false,
+      "label": "Host Nexus",
+      "faction": "host"
     }
   ],
   "notes": [
     "Position definitions are immutable; controller, occupants, cohesion, threat and route compromise are runtime state.",
     "Dawnstone has a single defensive line; its five positions use DSP_1..DSP_5.",
-    "Sector Condition thresholds outside East and West Walls are not yet calibrated."
+    "Sector Condition thresholds outside East and West Walls are not yet calibrated.",
+    "Host Nexus HN is a reserve, not a defensive position; capacity is unbounded for the finite Host roster."
   ]
 }

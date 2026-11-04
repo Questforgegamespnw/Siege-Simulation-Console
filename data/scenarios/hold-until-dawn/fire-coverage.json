@@ -1,0 +1,95 @@
+{
+  "scenario": "hold-until-dawn",
+  "zones": [
+    {
+      "id": "EAST_WALL_EXTERIOR",
+      "sectorId": "east-wall",
+      "firingPositionIds": [
+        "EWOP_1",
+        "EWOP_2",
+        "EWOP_3"
+      ],
+      "targetNodeIds": [
+        "EWOP_1_APP",
+        "EWOP_1_CLM",
+        "EWOP_2_APP",
+        "EWOP_2_CLM",
+        "EWOP_3_APP",
+        "EWOP_3_CLM"
+      ],
+      "contributionLimitPerUnitPerPhase": 1,
+      "requiresClearLane": true,
+      "notes": "Outer archers may fire across the whole sector; engaged archers use melee CP instead. Inner archers do not fire at exterior approach."
+    },
+    {
+      "id": "WEST_WALL_EXTERIOR",
+      "sectorId": "west-wall",
+      "firingPositionIds": [
+        "WWOP_1",
+        "WWOP_2",
+        "WWOP_3"
+      ],
+      "targetNodeIds": [
+        "WWOP_1_APP",
+        "WWOP_1_CLM",
+        "WWOP_2_APP",
+        "WWOP_2_CLM",
+        "WWOP_3_APP",
+        "WWOP_3_CLM"
+      ],
+      "contributionLimitPerUnitPerPhase": 1,
+      "requiresClearLane": true,
+      "notes": "Outer archers may fire across the whole sector; engaged archers use melee CP instead. Inner archers do not fire at exterior approach."
+    },
+    {
+      "id": "GATEHOUSE_EXTERIOR",
+      "sectorId": "gatehouse",
+      "firingPositionIds": [
+        "GHOP_1",
+        "GHOP_2",
+        "GHOP_3",
+        "GHOP_4"
+      ],
+      "targetNodeIds": [
+        "GHOP_1_APP",
+        "GHOP_1_CLM",
+        "GHOP_2_APP",
+        "GHOP_2_CLM",
+        "GHOP_3_APP",
+        "GHOP_3_CLM",
+        "GHOP_4_APP",
+        "GHOP_4_CLM"
+      ],
+      "contributionLimitPerUnitPerPhase": 1,
+      "requiresClearLane": true,
+      "notes": "Outer archers may fire across the whole sector; engaged archers use melee CP instead. Inner archers do not fire at exterior approach."
+    },
+    {
+      "id": "RESIDENTIAL_EXTERIOR",
+      "sectorId": "residential",
+      "firingPositionIds": [
+        "RDOP_1",
+        "RDOP_2"
+      ],
+      "targetNodeIds": [
+        "RDOP_1_APP",
+        "RDOP_1_CLM",
+        "RDOP_2_APP",
+        "RDOP_2_CLM"
+      ],
+      "contributionLimitPerUnitPerPhase": 1,
+      "requiresClearLane": true,
+      "notes": "Outer archers may fire across the whole sector; engaged archers use melee CP instead. Inner archers do not fire at exterior approach."
+    }
+  ],
+  "innerSupport": {
+    "trigger": "outer-wall-melee",
+    "rangedCPMultiplier": 0.8,
+    "notes": "Only valid firing lanes, and only if inner archer not personally engaged; resolve in later combat engine."
+  },
+  "notes": [
+    "Coverage zones are distinct from physical movement adjacency.",
+    "A ranged unit contributes CP at most once per phase, not once per target lane.",
+    "Exact target allocation/attrition distribution belongs to later combat resolver."
+  ]
+}

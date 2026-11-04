@@ -29,3 +29,11 @@ See `data/rules.json` for current Alpha numbers. Don't treat placeholders as tes
 - Routes are Deep Barracks to each muster point; one phase travel; compromised is a boolean and causes AR-mitigated travel attrition (magnitude TBD), not automatic blockade.
 - Sector Condition excludes muster and barracks. East/West map 8→6, 7→5, 6→4, 5→3, 3–4→2, 1–2→1, 0→0. Other sectors TBD.
 - Physical occupancy, position control, and remaining combat contribution are distinct. At ≤25% Cohesion a company still fights but cannot deny capture; retreat requires an order.
+
+## Milestone 0.5B decisions (2026-11-04)
+- Both factions begin fully in reserve: Coalition DB, Host HN; no scripted wave spawning.
+- Coalition defensive positions start Coalition-owned but empty. Ownership persists until physical entry and claim; no defensive CP when empty.
+- Host approaches and climbs are individual physical stages per outer position; approach/climb never captures.
+- Host free reinforcement requires an unbroken Host-controlled, uncontested corridor from HN; stop behind active counterattacks.
+- Outer archers cover all approach/climb lanes in their sector, with one CP contribution per phase, not per lane.
+- Unknown special-unit quantities and inner physical access edges remain unresolved, not fabricated.

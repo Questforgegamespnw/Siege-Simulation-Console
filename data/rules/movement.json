@@ -8,5 +8,40 @@
     "traversable": true,
     "attritionLossBeforeAR": null,
     "status": "penalty not calibrated"
+  },
+  "hostReinforcement": {
+    "source": "HN",
+    "requiresContiguousHostControlledUncontestedPath": true,
+    "contestedDestinationAllowed": false,
+    "stageAtNearestUncontestedRearNode": true,
+    "mayCrossContestedIntermediateNodes": false,
+    "assaultIsSeparateFromReposition": true,
+    "contestedMeaning": "active Coalition physical counterattack, not Position Threat",
+    "implementationStatus": "corridor checks active; staging fallback not automated"
+  },
+  "emptyPositionCapture": {
+    "ownershipPersistsWithoutOccupants": true,
+    "unoccupiedPositionDefensiveCP": 0,
+    "requiresPhysicalEntryAndClaim": true,
+    "approachOrClimbNeverClaims": true,
+    "implementationStatus": "outer wall claim active; inner access unresolved"
+  },
+  "rangedCoverage": {
+    "outerArcherSectorWide": true,
+    "contributionsPerUnitPerPhase": 1,
+    "innerExteriorFire": false,
+    "implementationStatus": "data contract only"
+  },
+  "hostAssaultFrontage": {
+    "conventionalCompaniesPerOuterPosition": 3,
+    "singleEntitiesExempt": true,
+    "enforcement": "climbing staging occupancy; full engaged frontage awaits combat resolver"
+  },
+  "counterattack": {
+    "declaringCounterattackContestsHostPosition": true,
+    "contestedHostPositionBlocksFreeReinforcement": true,
+    "reclaimRequiresNoEffectiveHostDefender": true,
+    "physicalAccess": "same-sector adjacent friendly defensive position (temporary coarse validation)",
+    "status": "partial: no attrition or contested combat resolution"
   }
 }

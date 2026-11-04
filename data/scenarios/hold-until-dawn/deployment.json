@@ -194,11 +194,1107 @@
       "compromised": false
     }
   ],
-  "units": [],
-  "status": "initial unit placement pending",
+  "units": [
+    {
+      "id": "CO_ARC_01",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_02",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_03",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_04",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_05",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_06",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_07",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_08",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_ARC_09",
+      "faction": "coalition",
+      "typeId": "archer",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_01",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_02",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_03",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_04",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_05",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_MAA_06",
+      "faction": "coalition",
+      "typeId": "men-at-arms",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_SPR_01",
+      "faction": "coalition",
+      "typeId": "spearman",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_SPR_02",
+      "faction": "coalition",
+      "typeId": "spearman",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_SPR_03",
+      "faction": "coalition",
+      "typeId": "spearman",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_SPR_04",
+      "faction": "coalition",
+      "typeId": "spearman",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_SPR_05",
+      "faction": "coalition",
+      "typeId": "spearman",
+      "locationId": "DB",
+      "cohesion": 100
+    },
+    {
+      "id": "CO_BRZ_01",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_02",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_03",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_04",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_05",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_06",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_07",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_08",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_09",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "CO_BRZ_10",
+      "faction": "coalition",
+      "typeId": "brazier-keeper",
+      "locationId": "DB",
+      "cohesion": 100,
+      "occupancyClass": "support-team"
+    },
+    {
+      "id": "HO_SWM_01",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_02",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_03",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_04",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_05",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_06",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_07",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_08",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_09",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_10",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_11",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_12",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_13",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_14",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_15",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_16",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_17",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_18",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_19",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_20",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_21",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_22",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_23",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_24",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_25",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_26",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_27",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_28",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_29",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_SWM_30",
+      "faction": "host",
+      "typeId": "swarmer",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_01",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_02",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_03",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_04",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_05",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_06",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_07",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_08",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_09",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_10",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_11",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_12",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_13",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_14",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_15",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_16",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_17",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_18",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_19",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_20",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_21",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_22",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_23",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_24",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_25",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_26",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_27",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_28",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_29",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_30",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_31",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_32",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_33",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_34",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_35",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_36",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_37",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_38",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_39",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_40",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_41",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_42",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_43",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_44",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_45",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_46",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_47",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_48",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_49",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_50",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_51",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_52",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_53",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_54",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_55",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_HAR_56",
+      "faction": "host",
+      "typeId": "harpy",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_01",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_02",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_03",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_04",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_05",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_06",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_07",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_08",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_09",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_10",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_11",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_12",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_13",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_14",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_15",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_16",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_17",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_18",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_19",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_20",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_21",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_22",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_23",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_24",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_25",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_26",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_27",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_28",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_29",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_WRA_30",
+      "faction": "host",
+      "typeId": "wraith",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_BKN_01",
+      "faction": "host",
+      "typeId": "black-knight",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_BKN_02",
+      "faction": "host",
+      "typeId": "black-knight",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_BKN_03",
+      "faction": "host",
+      "typeId": "black-knight",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_BKN_04",
+      "faction": "host",
+      "typeId": "black-knight",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_BKN_05",
+      "faction": "host",
+      "typeId": "black-knight",
+      "locationId": "HN",
+      "cohesion": 100
+    },
+    {
+      "id": "HO_CHV_01",
+      "faction": "host",
+      "typeId": "chevron-commander",
+      "locationId": "HN",
+      "cohesion": 100,
+      "provisional": true
+    },
+    {
+      "id": "HO_DRG_01",
+      "faction": "host",
+      "typeId": "dragon",
+      "locationId": "HN",
+      "cohesion": 100,
+      "provisional": true
+    },
+    {
+      "id": "HO_SHA_01",
+      "faction": "host",
+      "typeId": "shroud-archer",
+      "locationId": "HN",
+      "cohesion": 100,
+      "formationClass": "aggregate-contingent",
+      "provisional": true
+    }
+  ],
+  "status": "known-quantity roster staged in faction reserves; special unit quantities pending",
   "notes": [
-    "All defensive positions start Coalition-controlled, even if not occupied.",
-    "Unit instances and their locations are intentionally not invented.",
-    "Muster points and Deep Barracks do not contribute to sector condition."
+    "All Coalition units begin at DB, all Host units at HN; no scripted waves or predeployment.",
+    "All 34 defensive positions begin Coalition-controlled, unoccupied and contribute no CP until staffed.",
+    "Ownership changes only after a valid physical claim; approaching/climbing never flips control.",
+    "Brazier Keeper support teams do not occupy full company slots at DB.",
+    "Unknown-quantity Host special units are defined in unit archetypes, not instantiated.",
+    "Shroud Archer contingent is one provisional aggregate unit representing 15 CP total, not a confirmed individual headcount."
   ]
 }

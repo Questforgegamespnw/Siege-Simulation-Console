@@ -1,0 +1,41 @@
+{
+  "unitTypes": [
+    {
+      "id": "swarmer",
+      "baseCP": 45,
+      "baseAR": 0,
+      "tags": []
+    },
+    {
+      "id": "harpy",
+      "baseCP": 15,
+      "baseAR": 0,
+      "tags": []
+    },
+    {
+      "id": "wraith",
+      "baseCP": 20,
+      "baseAR": 0.35,
+      "tags": []
+    },
+    {
+      "id": "black-knight",
+      "baseCP": 50,
+      "baseAR": 0.5,
+      "tags": []
+    },
+    {
+      "id": "siege-beast",
+      "baseCP": 35,
+      "baseAR": 0.35,
+      "tags": []
+    },
+    {
+      "id": "thurible-priest",
+      "baseCP": 20,
+      "baseAR": 0.4,
+      "tags": []
+    }
+  ],
+  "note": "Type definitions only. Special abilities and formation composition pending."
+}

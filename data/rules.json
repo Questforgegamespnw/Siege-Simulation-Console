@@ -1,0 +1,57 @@
+{
+  "cohesionBreakThreshold": 25,
+  "movementPhasesBetweenSectors": 1,
+  "hostFollowOnMovementPhases": 1,
+  "rangedSupportAttritionResistance": 0.9,
+  "innerToOuterMeleeRangedCPMultiplier": 0.8,
+  "archerMeleeCPMultiplier": 0.6,
+  "shroudSuppressedArcherRangedCPMultiplier": 0.5,
+  "eastWestSectorConditionByHeld": {
+    "8": 6,
+    "7": 5,
+    "6": 4,
+    "5": 3,
+    "4": 2,
+    "3": 2,
+    "2": 1,
+    "1": 1,
+    "0": 0
+  },
+  "ratioBands": [
+    {
+      "maxExclusive": 0.5,
+      "coalitionLoss": 2,
+      "hostLoss": 15
+    },
+    {
+      "maxExclusive": 0.8,
+      "coalitionLoss": 5,
+      "hostLoss": 10
+    },
+    {
+      "maxExclusive": 1.2,
+      "coalitionLoss": 10,
+      "hostLoss": 10
+    },
+    {
+      "maxExclusive": 1.5,
+      "coalitionLoss": 15,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": 2,
+      "coalitionLoss": 20,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": 3,
+      "coalitionLoss": 25,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": null,
+      "coalitionLoss": 40,
+      "hostLoss": 5
+    }
+  ]
+}

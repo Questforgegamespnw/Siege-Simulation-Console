@@ -1,0 +1,14 @@
+{
+  "name": "siege-simulation-console",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "A lightweight siege and mass-combat simulator for D&D 5e.",
+  "scripts": {
+    "test": "node --test",
+    "simulate": "node src/cli/simulate.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

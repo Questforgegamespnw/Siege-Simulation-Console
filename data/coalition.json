@@ -1,0 +1,25 @@
+{
+  "unitTypes": [
+    {
+      "id": "archer",
+      "baseCP": 100,
+      "baseAR": 0,
+      "tags": [
+        "ranged"
+      ]
+    },
+    {
+      "id": "men-at-arms",
+      "baseCP": 150,
+      "baseAR": 0.1,
+      "tags": []
+    },
+    {
+      "id": "spearman",
+      "baseCP": 110,
+      "baseAR": 0.5,
+      "tags": []
+    }
+  ],
+  "note": "Type definitions only; full roster and deployment pending."
+}

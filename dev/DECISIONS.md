@@ -22,3 +22,10 @@
 - Other sector condition mappings, gate demolition, special units, hero actions, and full deployment.
 
 See `data/rules.json` for current Alpha numbers. Don't treat placeholders as tested balance.
+
+## Confirmed topology (0.5A)
+- East/West: 3 outer, 5 inner; Gatehouse: 4 outer, 4 inner; Residential: 2 outer, 3 inner; Dawnstone: 5 single-line defensive positions.
+- Every defensive position holds one company; each sector muster holds two; Deep Barracks capacity is 50.
+- Routes are Deep Barracks to each muster point; one phase travel; compromised is a boolean and causes AR-mitigated travel attrition (magnitude TBD), not automatic blockade.
+- Sector Condition excludes muster and barracks. East/West map 8→6, 7→5, 6→4, 5→3, 3–4→2, 1–2→1, 0→0. Other sectors TBD.
+- Physical occupancy, position control, and remaining combat contribution are distinct. At ≤25% Cohesion a company still fights but cannot deny capture; retreat requires an order.

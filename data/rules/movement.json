@@ -1,0 +1,12 @@
+{
+  "crossSectorTravelPhases": 1,
+  "hostFollowOnTravelPhases": 1,
+  "freeFriendlyLocalReposition": true,
+  "hostilePositionRequiresContestedAdvance": true,
+  "retreatRequiresOrder": true,
+  "routeCompromise": {
+    "traversable": true,
+    "attritionLossBeforeAR": null,
+    "status": "penalty not calibrated"
+  }
+}

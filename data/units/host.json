@@ -1,0 +1,96 @@
+{
+  "unitTypes": [
+    {
+      "id": "swarmer",
+      "baseCP": 45,
+      "baseAR": 0,
+      "tags": [],
+      "companySize": 100,
+      "plannedCount": 30
+    },
+    {
+      "id": "harpy",
+      "baseCP": 15,
+      "baseAR": 0,
+      "tags": [],
+      "companySize": 25,
+      "plannedCount": 56
+    },
+    {
+      "id": "wraith",
+      "baseCP": 20,
+      "baseAR": 0.35,
+      "tags": [
+        "leap"
+      ],
+      "companySize": 15,
+      "plannedCount": 30
+    },
+    {
+      "id": "shroud-archer",
+      "baseCP": null,
+      "baseAR": 0.35,
+      "tags": [
+        "ranged",
+        "mark"
+      ],
+      "notes": "Gatehouse ranged contingent contributes 15 CP total; individual unit CP TBD"
+    },
+    {
+      "id": "black-knight",
+      "baseCP": 50,
+      "baseAR": 0.5,
+      "tags": [
+        "single-entity"
+      ],
+      "plannedCount": 5
+    },
+    {
+      "id": "chevron-commander",
+      "baseCP": 100,
+      "baseAR": 0.5,
+      "tags": [
+        "single-entity"
+      ],
+      "notes": "CP and AR provisional"
+    },
+    {
+      "id": "siege-beast",
+      "baseCP": 35,
+      "baseAR": 0.35,
+      "tags": [
+        "single-entity",
+        "demolition"
+      ]
+    },
+    {
+      "id": "thurible-priest",
+      "baseCP": 20,
+      "baseAR": 0.4,
+      "tags": [
+        "single-entity",
+        "support"
+      ]
+    },
+    {
+      "id": "shroud-ballista",
+      "baseCP": null,
+      "baseAR": null,
+      "tags": [
+        "siege-equipment",
+        "suppression"
+      ],
+      "plannedCountApprox": 20
+    },
+    {
+      "id": "dragon",
+      "baseCP": 50,
+      "baseAR": null,
+      "tags": [
+        "single-entity",
+        "flying"
+      ],
+      "notes": "Provisional single-target CP per phase"
+    }
+  ]
+}

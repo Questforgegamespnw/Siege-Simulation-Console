@@ -1,0 +1,204 @@
+{
+  "scenario": "hold-until-dawn",
+  "initialControl": [
+    {
+      "positionId": "EWOP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWOP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWOP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWIP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWIP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWIP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWIP_4",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "EWIP_5",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWOP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWOP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWOP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWIP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWIP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWIP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWIP_4",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "WWIP_5",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHOP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHOP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHOP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHOP_4",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHIP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHIP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHIP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "GHIP_4",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "RDOP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "RDOP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "RDIP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "RDIP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "RDIP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "DSP_1",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "DSP_2",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "DSP_3",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "DSP_4",
+      "controller": "coalition",
+      "positionThreat": 0
+    },
+    {
+      "positionId": "DSP_5",
+      "controller": "coalition",
+      "positionThreat": 0
+    }
+  ],
+  "routeStates": [
+    {
+      "routeId": "DB_EWMP",
+      "compromised": false
+    },
+    {
+      "routeId": "DB_WWMP",
+      "compromised": false
+    },
+    {
+      "routeId": "DB_GHMP",
+      "compromised": false
+    },
+    {
+      "routeId": "DB_RDMP",
+      "compromised": false
+    },
+    {
+      "routeId": "DB_DSMP",
+      "compromised": false
+    }
+  ],
+  "units": [],
+  "status": "initial unit placement pending",
+  "notes": [
+    "All defensive positions start Coalition-controlled, even if not occupied.",
+    "Unit instances and their locations are intentionally not invented.",
+    "Muster points and Deep Barracks do not contribute to sector condition."
+  ]
+}

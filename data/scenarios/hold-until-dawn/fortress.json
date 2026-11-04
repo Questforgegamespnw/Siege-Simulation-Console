@@ -1,0 +1,406 @@
+{
+  "scenario": "hold-until-dawn",
+  "sectors": [
+    {
+      "id": "east-wall",
+      "label": "East Wall",
+      "positionIds": [
+        "EWOP_1",
+        "EWOP_2",
+        "EWOP_3",
+        "EWIP_1",
+        "EWIP_2",
+        "EWIP_3",
+        "EWIP_4",
+        "EWIP_5"
+      ],
+      "musterPointId": "EWMP",
+      "conditionMapping": "eastWest"
+    },
+    {
+      "id": "west-wall",
+      "label": "West Wall",
+      "positionIds": [
+        "WWOP_1",
+        "WWOP_2",
+        "WWOP_3",
+        "WWIP_1",
+        "WWIP_2",
+        "WWIP_3",
+        "WWIP_4",
+        "WWIP_5"
+      ],
+      "musterPointId": "WWMP",
+      "conditionMapping": "eastWest"
+    },
+    {
+      "id": "gatehouse",
+      "label": "Gatehouse",
+      "positionIds": [
+        "GHOP_1",
+        "GHOP_2",
+        "GHOP_3",
+        "GHOP_4",
+        "GHIP_1",
+        "GHIP_2",
+        "GHIP_3",
+        "GHIP_4"
+      ],
+      "musterPointId": "GHMP",
+      "conditionMapping": null
+    },
+    {
+      "id": "residential",
+      "label": "Residential",
+      "positionIds": [
+        "RDOP_1",
+        "RDOP_2",
+        "RDIP_1",
+        "RDIP_2",
+        "RDIP_3"
+      ],
+      "musterPointId": "RDMP",
+      "conditionMapping": null
+    },
+    {
+      "id": "dawnstone",
+      "label": "Dawnstone",
+      "positionIds": [
+        "DSP_1",
+        "DSP_2",
+        "DSP_3",
+        "DSP_4",
+        "DSP_5"
+      ],
+      "musterPointId": "DSMP",
+      "conditionMapping": null
+    }
+  ],
+  "positions": [
+    {
+      "id": "EWOP_1",
+      "sectorId": "east-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Outer Position 1"
+    },
+    {
+      "id": "EWOP_2",
+      "sectorId": "east-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Outer Position 2"
+    },
+    {
+      "id": "EWOP_3",
+      "sectorId": "east-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Outer Position 3"
+    },
+    {
+      "id": "EWIP_1",
+      "sectorId": "east-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Inner Position 1"
+    },
+    {
+      "id": "EWIP_2",
+      "sectorId": "east-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Inner Position 2"
+    },
+    {
+      "id": "EWIP_3",
+      "sectorId": "east-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Inner Position 3"
+    },
+    {
+      "id": "EWIP_4",
+      "sectorId": "east-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Inner Position 4"
+    },
+    {
+      "id": "EWIP_5",
+      "sectorId": "east-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "East Wall Inner Position 5"
+    },
+    {
+      "id": "EWMP",
+      "sectorId": "east-wall",
+      "zone": "muster",
+      "capacity": 2,
+      "countsForSectorCondition": false,
+      "label": "East Wall Muster Point"
+    },
+    {
+      "id": "WWOP_1",
+      "sectorId": "west-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Outer Position 1"
+    },
+    {
+      "id": "WWOP_2",
+      "sectorId": "west-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Outer Position 2"
+    },
+    {
+      "id": "WWOP_3",
+      "sectorId": "west-wall",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Outer Position 3"
+    },
+    {
+      "id": "WWIP_1",
+      "sectorId": "west-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Inner Position 1"
+    },
+    {
+      "id": "WWIP_2",
+      "sectorId": "west-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Inner Position 2"
+    },
+    {
+      "id": "WWIP_3",
+      "sectorId": "west-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Inner Position 3"
+    },
+    {
+      "id": "WWIP_4",
+      "sectorId": "west-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Inner Position 4"
+    },
+    {
+      "id": "WWIP_5",
+      "sectorId": "west-wall",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "West Wall Inner Position 5"
+    },
+    {
+      "id": "WWMP",
+      "sectorId": "west-wall",
+      "zone": "muster",
+      "capacity": 2,
+      "countsForSectorCondition": false,
+      "label": "West Wall Muster Point"
+    },
+    {
+      "id": "GHOP_1",
+      "sectorId": "gatehouse",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Outer Position 1"
+    },
+    {
+      "id": "GHOP_2",
+      "sectorId": "gatehouse",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Outer Position 2"
+    },
+    {
+      "id": "GHOP_3",
+      "sectorId": "gatehouse",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Outer Position 3"
+    },
+    {
+      "id": "GHOP_4",
+      "sectorId": "gatehouse",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Outer Position 4"
+    },
+    {
+      "id": "GHIP_1",
+      "sectorId": "gatehouse",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Inner Position 1"
+    },
+    {
+      "id": "GHIP_2",
+      "sectorId": "gatehouse",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Inner Position 2"
+    },
+    {
+      "id": "GHIP_3",
+      "sectorId": "gatehouse",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Inner Position 3"
+    },
+    {
+      "id": "GHIP_4",
+      "sectorId": "gatehouse",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Gatehouse Inner Position 4"
+    },
+    {
+      "id": "GHMP",
+      "sectorId": "gatehouse",
+      "zone": "muster",
+      "capacity": 2,
+      "countsForSectorCondition": false,
+      "label": "Gatehouse Muster Point"
+    },
+    {
+      "id": "RDOP_1",
+      "sectorId": "residential",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Residential Outer Position 1"
+    },
+    {
+      "id": "RDOP_2",
+      "sectorId": "residential",
+      "zone": "outer",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Residential Outer Position 2"
+    },
+    {
+      "id": "RDIP_1",
+      "sectorId": "residential",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Residential Inner Position 1"
+    },
+    {
+      "id": "RDIP_2",
+      "sectorId": "residential",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Residential Inner Position 2"
+    },
+    {
+      "id": "RDIP_3",
+      "sectorId": "residential",
+      "zone": "inner",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Residential Inner Position 3"
+    },
+    {
+      "id": "RDMP",
+      "sectorId": "residential",
+      "zone": "muster",
+      "capacity": 2,
+      "countsForSectorCondition": false,
+      "label": "Residential Muster Point"
+    },
+    {
+      "id": "DSP_1",
+      "sectorId": "dawnstone",
+      "zone": "single",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Dawnstone Single Position 1"
+    },
+    {
+      "id": "DSP_2",
+      "sectorId": "dawnstone",
+      "zone": "single",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Dawnstone Single Position 2"
+    },
+    {
+      "id": "DSP_3",
+      "sectorId": "dawnstone",
+      "zone": "single",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Dawnstone Single Position 3"
+    },
+    {
+      "id": "DSP_4",
+      "sectorId": "dawnstone",
+      "zone": "single",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Dawnstone Single Position 4"
+    },
+    {
+      "id": "DSP_5",
+      "sectorId": "dawnstone",
+      "zone": "single",
+      "capacity": 1,
+      "countsForSectorCondition": true,
+      "label": "Dawnstone Single Position 5"
+    },
+    {
+      "id": "DSMP",
+      "sectorId": "dawnstone",
+      "zone": "muster",
+      "capacity": 2,
+      "countsForSectorCondition": false,
+      "label": "Dawnstone Muster Point"
+    },
+    {
+      "id": "DB",
+      "sectorId": "deep-barracks",
+      "zone": "reserve",
+      "capacity": 50,
+      "countsForSectorCondition": false,
+      "label": "Deep Barracks"
+    }
+  ],
+  "notes": [
+    "Position definitions are immutable; controller, occupants, cohesion, threat and route compromise are runtime state.",
+    "Dawnstone has a single defensive line; its five positions use DSP_1..DSP_5.",
+    "Sector Condition thresholds outside East and West Walls are not yet calibrated."
+  ]
+}

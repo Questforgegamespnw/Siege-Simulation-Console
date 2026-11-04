@@ -1,0 +1,26 @@
+{
+  "abilities": [
+    {
+      "id": "chevron-crushing-assault",
+      "positionThreatTotal": 3,
+      "minHostToCoalitionCPRatio": 3,
+      "notes": "Only when Chevron physically engaged and meets ratio"
+    },
+    {
+      "id": "wraith-leap",
+      "requiresSuccessfulNonfatalShroudArrowMark": true,
+      "arrivalCPDisruptionFraction": 0.2,
+      "durationExchanges": 1
+    },
+    {
+      "id": "thurible-blessing",
+      "hostCPBonusFraction": 0.1,
+      "stacking": false
+    },
+    {
+      "id": "consecrated-light",
+      "nonstacking": true
+    }
+  ],
+  "status": "special mechanics not implemented"
+}

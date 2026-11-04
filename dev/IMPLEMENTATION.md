@@ -26,3 +26,6 @@
 - [ ] Build HTML UI on top of the engine without duplicating rules
 - [ ] Show positions, units, orders, events, and sector condition narratives
 - [ ] Measure GM administrative time per siege phase
+
+## Milestone 0.5A status
+Fortress topology and reserve routes are configured and validated. Next: unit instances/deployment and Host access geometry; then movement resolver. Route-compromise attrition magnitude, Gatehouse/Residential/Dawnstone condition mapping and special-unit details remain TBD.

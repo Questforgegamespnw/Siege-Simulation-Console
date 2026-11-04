@@ -1,0 +1,43 @@
+{
+  "unitTypes": [
+    {
+      "id": "archer",
+      "baseCP": 100,
+      "baseAR": 0,
+      "tags": [
+        "ranged"
+      ],
+      "companySize": 100,
+      "plannedCount": 9
+    },
+    {
+      "id": "men-at-arms",
+      "baseCP": 150,
+      "baseAR": 0.1,
+      "tags": [],
+      "companySize": 100,
+      "plannedCount": 6
+    },
+    {
+      "id": "spearman",
+      "baseCP": 110,
+      "baseAR": 0.5,
+      "tags": [],
+      "companySize": 100,
+      "plannedCount": 5
+    },
+    {
+      "id": "brazier-keeper",
+      "baseCP": 10,
+      "baseAR": null,
+      "tags": [
+        "support",
+        "light"
+      ],
+      "teamSize": 3,
+      "plannedCount": 10,
+      "notes": "10 CP only if directly attacked; AR TBD"
+    }
+  ],
+  "supportPersonnelApprox": 270
+}

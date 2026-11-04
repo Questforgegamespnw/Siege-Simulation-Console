@@ -1,9 +1,11 @@
 import { readFileSync } from 'node:fs';
 import { createInitialState } from '../engine/siege-engine.js';
 import { getEastWestSectorCondition } from '../lib/sector-condition.js';
-const load = (name) => JSON.parse(readFileSync(new URL(`../../data/${name}.json`, import.meta.url), 'utf8'));
-const rules = load('rules');
-const state = createInitialState({ fortress: load('fortress'), deployment: load('deployment') });
-const eastWall = state.positions.filter((p) => p.sectorId === 'east-wall');
-console.log('Siege Simulation Console — milestone 0 fixture (no phase resolved)');
+const load = (path) => JSON.parse(readFileSync(new URL(`../../data/${path}.json`, import.meta.url), 'utf8'));
+const fortress = load('scenarios/hold-until-dawn/fortress');
+const deployment = load('scenarios/hold-until-dawn/deployment');
+const rules = load('rules/control');
+const state = createInitialState({ fortress, deployment });
+const eastWall = state.positions.filter((p) => p.sectorId === 'east-wall' && p.countsForSectorCondition);
+console.log('Siege Simulation Console — milestone 0.5A fortress fixture (no phase resolved)');
 console.log(JSON.stringify(getEastWestSectorCondition(eastWall, rules.eastWestSectorConditionByHeld), null, 2));

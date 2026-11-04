@@ -1,39 +1,33 @@
 # Siege Simulation Console
 
-A lightweight HTML-oriented siege and mass-combat simulator for D&D 5e, keeping large-scale battles impactful without hundreds of individual dice rolls.
+A lightweight HTML-based siege and mass-combat simulator for D&D 5e. **Hold Until Dawn** is the first scenario.
 
-**Status:** repository skeleton / milestone 0. The combat and movement engine is **not yet implemented**. The first scenario is **Hold Until Dawn**.
+## Current milestone: 0.5A — fortress data foundation
 
-## Quick start
+The project is **not yet a working siege simulator**. The CLI reports the starting East Wall condition; the phase resolver deliberately throws until implemented.
 
-Requires Node.js 20+.
-
-```bash
-npm test
-npm run simulate
+```powershell
+npm.cmd test
+npm.cmd run simulate
 ```
 
-`simulate` currently prints an initial East Wall fixture and derived Sector Condition; it does **not** resolve a siege phase yet.
+## Layout
 
-## Organization
+- `data/rules/` — numerical rules and modifiers (some provisional)
+- `data/units/` — unit type catalog and special ability definitions
+- `data/scenarios/hold-until-dawn/` — fortress geometry, reinforcement routes, initial control, waves, objectives
+- `src/lib/` — pure rule calculations (many stubs)
+- `src/engine/` — mutable runtime state and phase orchestration
+- `src/cli/` — headless demonstration
+- `tests/` — automated checks, including fortress topology
+- `dev/` — decisions, implementation notes and references
 
-- `data/`: scenario content and provisional rule configuration
-- `src/lib/`: reusable pure rule functions (mostly explicit stubs)
-- `src/engine/`: state creation and phase orchestration (phase resolver pending)
-- `src/cli/`: headless demonstration
-- `tests/`: executable checks for implemented behavior and placeholders for future tests
-- `dev/`: decisions, implementation steps, changelog, and balance notes
+**Data separation:** static fortress positions and routes do not store changing control, occupants, or compromise status. Those are initialized from `deployment.json` and belong to runtime state.
 
-## Core phase sequence
+**Known gaps:** unit-instance deployment, Host approach connections, special-unit mechanics, non-wall sector condition thresholds, and route-compromise attrition magnitude are not finalized. No values are invented to fill these gaps.
 
-1. Validate orders, movement and reinforcement arrivals.
-2. Determine engagements and ranged coverage.
-3. Resolve simultaneous attrition from a frozen engagement snapshot.
-4. Reassess Cohesion (25% break threshold), position control and Sector Condition.
-5. Emit event log and schedule follow-on movement for the next phase.
+## Applying this ZIP to an existing repository
 
-See `dev/DECISIONS.md` for confirmed vs provisional rules. The scenario configuration is deliberately minimal; it is not a complete deployment roster.
+Copy the *contents* of this ZIP's top-level `siege-simulation-console-v0.5a` folder into the root of your cloned repository. Remove the obsolete root-level `data/*.json` files if present. Review differences and run tests before committing. Do not copy a `.git` directory; none is included.
 
-## License
-
-MIT. Replace the generic copyright holder in `LICENSE` with your preferred name/entity if desired.
+MIT licensed. See `LICENSE`.

@@ -1,0 +1,110 @@
+{
+  "scenario": "hold-until-dawn",
+  "routes": [
+    {
+      "id": "DB_EWMP",
+      "fromPositionId": "DB",
+      "toPositionId": "EWMP",
+      "bidirectional": true,
+      "travelPhases": 1
+    },
+    {
+      "id": "DB_WWMP",
+      "fromPositionId": "DB",
+      "toPositionId": "WWMP",
+      "bidirectional": true,
+      "travelPhases": 1
+    },
+    {
+      "id": "DB_GHMP",
+      "fromPositionId": "DB",
+      "toPositionId": "GHMP",
+      "bidirectional": true,
+      "travelPhases": 1
+    },
+    {
+      "id": "DB_RDMP",
+      "fromPositionId": "DB",
+      "toPositionId": "RDMP",
+      "bidirectional": true,
+      "travelPhases": 1
+    },
+    {
+      "id": "DB_DSMP",
+      "fromPositionId": "DB",
+      "toPositionId": "DSMP",
+      "bidirectional": true,
+      "travelPhases": 1
+    }
+  ],
+  "localAccess": [
+    {
+      "sectorId": "east-wall",
+      "fromPositionId": "EWMP",
+      "toPositionIds": [
+        "EWIP_1",
+        "EWIP_2",
+        "EWIP_3",
+        "EWIP_4",
+        "EWIP_5"
+      ],
+      "movementClass": "friendly-local",
+      "travelPhases": 0
+    },
+    {
+      "sectorId": "west-wall",
+      "fromPositionId": "WWMP",
+      "toPositionIds": [
+        "WWIP_1",
+        "WWIP_2",
+        "WWIP_3",
+        "WWIP_4",
+        "WWIP_5"
+      ],
+      "movementClass": "friendly-local",
+      "travelPhases": 0
+    },
+    {
+      "sectorId": "gatehouse",
+      "fromPositionId": "GHMP",
+      "toPositionIds": [
+        "GHIP_1",
+        "GHIP_2",
+        "GHIP_3",
+        "GHIP_4"
+      ],
+      "movementClass": "friendly-local",
+      "travelPhases": 0
+    },
+    {
+      "sectorId": "residential",
+      "fromPositionId": "RDMP",
+      "toPositionIds": [
+        "RDIP_1",
+        "RDIP_2",
+        "RDIP_3"
+      ],
+      "movementClass": "friendly-local",
+      "travelPhases": 0
+    },
+    {
+      "sectorId": "dawnstone",
+      "fromPositionId": "DSMP",
+      "toPositionIds": [
+        "DSP_1",
+        "DSP_2",
+        "DSP_3",
+        "DSP_4",
+        "DSP_5"
+      ],
+      "movementClass": "friendly-local",
+      "travelPhases": 0
+    }
+  ],
+  "notes": [
+    "Route compromised flag is initialized in deployment and tracked in runtime state.",
+    "Compromised routes remain traversable and impose an AR-mitigated attrition penalty; magnitude is TBD.",
+    "Local access is not permission to enter hostile-controlled positions for free.",
+    "The specific Host climbing/entry connections remain to be defined before Host movement resolution."
+  ]
+}

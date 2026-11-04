@@ -1,0 +1,13 @@
+{
+  "scenario": "hold-until-dawn",
+  "coalitionVictory": "Protect consecrated Dawnstone until first sunlight triggers Golden Barrier",
+  "hostVictoryConditions": [
+    "Siege Beasts reach and damage Dawnstone base",
+    "Dawnstone network disrupted",
+    "Designated corruption-capable Host commander reaches and corrupts Dawnstone sigils"
+  ],
+  "notes": [
+    "Ordinary Thurible Priests cannot corrupt Dawnstone.",
+    "Objective triggers are scenario data; resolution remains unimplemented."
+  ]
+}

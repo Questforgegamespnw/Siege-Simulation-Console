@@ -1,0 +1,20 @@
+{
+  "archerMeleeCPMultiplier": 0.6,
+  "shroudSuppressedArcherRangedCPMultiplier": 0.5,
+  "innerToOuterMeleeRangedCPMultiplier": 0.8,
+  "rangedSupportAR": 0.9,
+  "brazierLightHostCPDebuffs": {
+    "swarmer": -0.1,
+    "harpy": -0.1,
+    "black_knight": -0.15,
+    "wraith": -0.3,
+    "shroud_archer": -0.2
+  },
+  "priestHostCPBuff": 0.1,
+  "notes": [
+    "Archer melee and ranged suppression modifiers are alternatives, not cumulative.",
+    "Inner-to-outer ranged support only applies when Host reaches battlement melee.",
+    "90% AR only while participating at range and not directly melee engaged; targeted attack may create separate engagement.",
+    "Priest and light modifiers nonstacking; combination rule still provisional."
+  ]
+}

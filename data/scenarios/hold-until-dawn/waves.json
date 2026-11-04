@@ -1,0 +1,8 @@
+{
+  "scenario": "hold-until-dawn",
+  "status": "pending",
+  "waves": [],
+  "notes": [
+    "Host approach, climb, melee phases to be encoded after unit-instance data is finalized."
+  ]
+}

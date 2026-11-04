@@ -1,0 +1,23 @@
+{
+  "cohesionBreakThresholdPercent": 25,
+  "brokenStillContributesCP": true,
+  "brokenDeniesOccupation": false,
+  "brokenAutomaticallyRetreats": false,
+  "positionThreatMaximum": 4,
+  "eastWestSectorConditionByHeld": {
+    "8": 6,
+    "7": 5,
+    "6": 4,
+    "5": 3,
+    "4": 2,
+    "3": 2,
+    "2": 1,
+    "1": 1,
+    "0": 0
+  },
+  "otherSectorConditionMappings": "TBD",
+  "notes": [
+    "Control and presence are separate; broken units may remain present even when Host claims a position.",
+    "Position Threat and physical control interact; exact capture timing to be implemented."
+  ]
+}

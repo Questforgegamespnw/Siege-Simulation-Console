@@ -1,0 +1,45 @@
+{
+  "ratioBands": [
+    {
+      "maxExclusive": 0.5,
+      "coalitionLoss": 2,
+      "hostLoss": 15
+    },
+    {
+      "maxExclusive": 0.8,
+      "coalitionLoss": 5,
+      "hostLoss": 10
+    },
+    {
+      "maxExclusive": 1.2,
+      "coalitionLoss": 10,
+      "hostLoss": 10
+    },
+    {
+      "maxExclusive": 1.5,
+      "coalitionLoss": 15,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": 2,
+      "coalitionLoss": 20,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": 3,
+      "coalitionLoss": 25,
+      "hostLoss": 5
+    },
+    {
+      "maxExclusive": null,
+      "coalitionLoss": 40,
+      "hostLoss": 5
+    }
+  ],
+  "conventionalAssaultSlotsPerOccupiedCoalitionPosition": 3,
+  "climbingHostCPMultiplier": 0.3,
+  "notes": [
+    "Ratio bands represent base Cohesion loss before individual Attrition Resistance.",
+    "Single Entity Units do not consume conventional assault slots but require plausible physical access."
+  ]
+}

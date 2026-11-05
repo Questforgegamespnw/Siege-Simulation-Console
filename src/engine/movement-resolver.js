@@ -47,6 +47,17 @@ export function resolveMovementPhase(state, orders, { fortress, routes, hostTopo
       const targetNode = hostTopology.nodes.find(n => n.id === order.to);
       if (targetNode?.kind === 'climbing' && assaultFrontageCount(next, order.to) >= 3) throw new Error('Host assault frontage limit (3)');
       transfer(unit, order.to);
+    } else if (order.kind === 'host-assault-contact') {
+      // Physical melee contact is NOT capture. A Host unit enters a wall position
+      // from its matching climb node; ownership remains unchanged until claimed.
+      if (unit.faction !== 'host') throw new Error('Assault contact requires Host unit');
+      const position = positions.get(order.to);
+      if (!position || position.zone !== 'outer' || position.controller !== 'coalition') throw new Error('Assault contact requires Coalition outer wall');
+      const edge = hostTopology.edges.find(e => e.from === unit.locationId && e.to === order.to && e.kind === 'assault-entry');
+      if (!edge) throw new Error('Assault contact requires matching climb access');
+      if (!unit.singleEntity && next.units.filter(u => u.faction === 'host' && u.locationId === order.to && !u.singleEntity).length >= 3) throw new Error('Host wall-contact frontage limit (3)');
+      transfer(unit, order.to);
+      next.events.push({phase:next.phase,kind:'assault-contact',unitId:unit.id,positionId:order.to});
     } else if (order.kind === 'host-claim') {
       if (unit.faction !== 'host') throw new Error('Wrong faction');
       const position = positions.get(order.to);

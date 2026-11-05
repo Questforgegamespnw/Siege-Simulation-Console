@@ -52,7 +52,7 @@ export function resolveCombatPhase(state, clusters, {coalitionTypes, hostTypes, 
         const mode = modeFor(id);
         // Supporting ranged archers use 90% AR only when not in melee.
         const ar = (u.typeId === 'archer' && ['ranged','inner-support'].includes(mode)) ? 0.9 : def.baseAR;
-        const change = applyAttrition(u, base, ar);
+        const change = applyAttrition(u, cluster.supportImmune && ['ranged','inner-support'].includes(mode) ? 0 : base, ar);
         changes.push(change);
       }
     }

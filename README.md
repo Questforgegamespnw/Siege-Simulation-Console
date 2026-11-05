@@ -63,3 +63,14 @@ No speculative inner-wall edges or siege victory logic are implemented.
 ## Milestone 0.7A: explicit combat slice
 
 `src/engine/combat-resolver.js` resolves supplied engagement clusters with frozen-snapshot CP and simultaneous Cohesion losses. Exterior Archer coverage is sector-wide and each unit may participate once per phase. No automatic withdrawal, capture, or position movement occurs. This is **not** the full siege-phase resolver. See `dev/COMBAT_07A.md`.
+
+### 0.7B combat slice
+See `dev/COMBAT_07B.md` for the new `resolveBattlefieldCombat` API, provisional ranged attrition bands, and current limits. Run `npm.cmd test` on Windows PowerShell. Full phase orchestration remains deferred.
+
+## 0.7C provisional integrated test
+
+`resolveSiegePhase` connects movement to combat and introduces `host-assault-contact` without automatic capture. Run `PRINT_SIEGE_SCENARIOS=1 node --test tests/integrated-contact-07c.test.js` for the six-phase contact trace. This is not a complete siege phase engine; see `dev/INTEGRATED_07C.md`.
+
+## 0.7D — Unified sector combat
+
+Sector combat now aggregates physically engaged Host forces across inner and outer defensive positions into **one opposed CP comparison** per sector. Inner Archers contacted by Harpies or other Host switch to 60% melee CP; uncontacted inner Archers can provide 80% support with an explicitly clear lane. Exterior approach/climb fire remains one-sided and distinct. See `dev/UNIFIED_SECTOR_07D.md` for test scenarios and limitations. Harpy interior movement and full siege resolution are **not** implemented yet.

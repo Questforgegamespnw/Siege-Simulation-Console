@@ -31,3 +31,14 @@
 - Added pure CP, ratio bands, individual AR, and explicit-cluster combat resolver.
 - Sector-wide Archer fire coverage; no double-counting; frozen snapshot and no automatic retreat.
 - Added combat regression tests and documented deferred mechanics.
+
+## 0.7B
+- Sector-wide outer-wall engagement discovery, unilateral exterior fire, provisional ranged bands, shared frozen-snapshot resolver, regression tests. No existing unit or melee balance values changed.
+
+## 0.7D — Unified sector combat
+- Unified physically present Host formations (outer and inner positions) into one opposed sector-wide CP comparison; no per-position attrition bands.
+- Contacted inner defenders participate in the sector battle; inner Archers personally contacted by Host switch from 80% support to 60% melee CP.
+- Uncontacted inner Archers support only when explicit clear-lane authorization exists and Host reaches outer wall.
+- Exterior approach/climb fire remains a separate unilateral engagement; no company contributes to two engagements in one phase.
+- Added five mixed-force regression tests. No unit values or existing attrition bands changed.
+- Interior Host occupancy is a test-fixture input; Harpy flight and interior access movement are NOT implemented.

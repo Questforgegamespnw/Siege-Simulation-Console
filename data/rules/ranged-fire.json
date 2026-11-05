@@ -1,0 +1,37 @@
+{
+  "status": "provisional-pending-siege-testing",
+  "ratioBasis": "effective-ranged-cp / cohesion-adjusted-exposed-target-mass",
+  "bands": [
+    {
+      "min": 0,
+      "maxExclusive": 0.25,
+      "hostLoss": 2
+    },
+    {
+      "min": 0.25,
+      "maxExclusive": 0.5,
+      "hostLoss": 5
+    },
+    {
+      "min": 0.5,
+      "maxExclusive": 1,
+      "hostLoss": 10
+    },
+    {
+      "min": 1,
+      "maxExclusive": 2,
+      "hostLoss": 15
+    },
+    {
+      "min": 2,
+      "maxExclusive": null,
+      "hostLoss": 20
+    }
+  ],
+  "notes": [
+    "Exterior fire is one-sided; targets cannot retaliate by target mass.",
+    "Climbing melee multiplier never reduces target mass.",
+    "All exposed companies in one sector share a single ranged attrition band.",
+    "No balance changes to existing unit definitions or melee rules."
+  ]
+}

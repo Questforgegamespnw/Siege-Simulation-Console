@@ -18,6 +18,6 @@
   "otherSectorConditionMappings": "TBD",
   "notes": [
     "Control and presence are separate; broken units may remain present even when Host claims a position.",
-    "Position Threat and physical control interact; exact capture timing to be implemented."
+    "Position Threat and physical control interact; capture requires a committed Siege Phase after legal entry."
   ]
 }

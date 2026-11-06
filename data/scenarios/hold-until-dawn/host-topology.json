@@ -151,6 +151,27 @@
       "kind": "climbing",
       "sectorId": "residential",
       "capacity": null
+    },
+    {
+      "id": "EW_PASS_1",
+      "kind": "interior-passage",
+      "sectorId": "east-wall",
+      "capacity": 3,
+      "provisional": true
+    },
+    {
+      "id": "EW_PASS_2",
+      "kind": "interior-passage",
+      "sectorId": "east-wall",
+      "capacity": 3,
+      "provisional": true
+    },
+    {
+      "id": "EW_PASS_3",
+      "kind": "interior-passage",
+      "sectorId": "east-wall",
+      "capacity": 3,
+      "provisional": true
     }
   ],
   "edges": [
@@ -369,6 +390,48 @@
       "to": "RDOP_2",
       "kind": "assault-entry",
       "bidirectional": true
+    },
+    {
+      "from": "EWOP_1",
+      "to": "EW_PASS_1",
+      "kind": "captured-wall-exit",
+      "bidirectional": true,
+      "provisional": true
+    },
+    {
+      "from": "EW_PASS_1",
+      "to": "EWIP_1",
+      "kind": "interior-assault-entry",
+      "bidirectional": true,
+      "provisional": true
+    },
+    {
+      "from": "EWOP_2",
+      "to": "EW_PASS_2",
+      "kind": "captured-wall-exit",
+      "bidirectional": true,
+      "provisional": true
+    },
+    {
+      "from": "EW_PASS_2",
+      "to": "EWIP_2",
+      "kind": "interior-assault-entry",
+      "bidirectional": true,
+      "provisional": true
+    },
+    {
+      "from": "EWOP_3",
+      "to": "EW_PASS_3",
+      "kind": "captured-wall-exit",
+      "bidirectional": true,
+      "provisional": true
+    },
+    {
+      "from": "EW_PASS_3",
+      "to": "EWIP_3",
+      "kind": "interior-assault-entry",
+      "bidirectional": true,
+      "provisional": true
     }
   ],
   "innerAccessCandidates": [
@@ -386,8 +449,8 @@
         "EWIP_4",
         "EWIP_5"
       ],
-      "status": "unresolved-access-edges",
-      "note": "Physical entry edges require a later layout ruling; do not treat all-to-all as traversable."
+      "status": "provisional-east-wall-lanes-1-to-3",
+      "note": "Provisional 1:1 outer\u2192passage\u2192inner edges for legal traversal testing. Inner positions 4/5 and Dawnstone unresolved; NOT finalized map geography."
     },
     {
       "sectorId": "west-wall",

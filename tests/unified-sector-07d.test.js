@@ -13,7 +13,7 @@ const config={
  hostTypes:json('../data/units/host.json'),
  combatRules:json('../data/rules/combat.json'),
  rangedRules:json('../data/rules/ranged-fire.json'),
- innerSupportClearLanes:{'east-wall':true}
+ innerSupportClearLanes:{'east-wall':true},engagementReach:'legacy-sector'
 };
 const pick=(s,type,faction,n)=>s.units.filter(u=>u.typeId===type&&u.faction===faction).slice(0,n);
 function setup({harpy=false,outerArcher=false,approach=false}={}){

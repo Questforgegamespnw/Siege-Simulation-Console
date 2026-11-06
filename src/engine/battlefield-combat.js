@@ -1,6 +1,7 @@
 import {discoverEngagements} from './engagement-discovery.js';
 import {resolveExteriorFire} from '../lib/ranged-fire.js';
 import {resolveCombatPhase} from './combat-resolver.js';
+import {reinforceSwarmers} from './swarmer-reinforcement.js';
 
 /** All engagement results use the SAME pre-combat snapshot, then commit together. */
 export function resolveBattlefieldCombat(state, config) {
@@ -16,5 +17,6 @@ export function resolveBattlefieldCombat(state, config) {
   }
   for(const u of next.units) u.cohesion=Math.max(0,before.get(u.id)-(lossById.get(u.id)??0));
   next.events=[...(state.events??[]),...ranged.state.events.slice((state.events??[]).length),...melee.state.events.slice((state.events??[]).length)];
-  return {state:next,discovered,exterior:ranged.engagements,melee:melee.engagements};
+  const replacements=reinforceSwarmers(state,next,discovered,config);
+  return {state:next,discovered,exterior:ranged.engagements,melee:melee.engagements,replacements};
 }

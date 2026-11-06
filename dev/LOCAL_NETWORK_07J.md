@@ -1,0 +1,9 @@
+# v0.7J — Local position network and dynamic denial
+
+Implemented a *separate* deterministic local movement graph for East and West walls. Each wall's three outer positions connect to each of the first three inner positions (nine edges); each of those inner positions connects to the sector's existing single muster position of capacity two (three more edges). The two-space muster is one capacity-two position, **not** two distinct muster positions. Inner positions 4/5 remain in the scenario and existing Coalition local-access configuration; their relationship to this new 3×3×muster Host path is not silently invented.
+
+`local-move` resolves a declared destination within the current Siege Phase; BFS can traverse multiple legal local edges without spending one Siege Phase per edge. `local-assault` permits contact with an effectively defended *destination* but never with a defended intermediate position. Both leave territorial ownership unchanged. Effective defenders are calculated from actual units at >25% cohesion; broken companies remain physically present and can be passed. A Host unit may not leave a Coalition-owned outer foothold until Capture has completed. Coalition strategic `coalition-route` still uses En Route.
+
+This change adds the shared local path validator and explicit orders, **but does not yet replace the v0.7I test dispatcher**. The old dispatcher and its passage-node experiment remain for regression comparison, and their timings must not be treated as the revised local movement experiment. Next work: update the deterministic East Wall test dispatcher to use `local-move` / `local-assault`, then rerun matched open/defended simulations, including comparable Harpy timing. Do not report v0.7I four-phase interior delay as an output of the new rule.
+
+No changes to combat CP, Capture cost, frontage, or attrition bands. Tests: 75 passing.

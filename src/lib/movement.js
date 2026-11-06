@@ -1,3 +1,4 @@
+import {positionState,securedHostPosition} from './position-state.js';
 /** Pure, deterministic movement checks. No combat or attrition is resolved here. */
 export function adjacency(edges) {
   const graph = new Map();
@@ -19,7 +20,7 @@ export function reachableHostNodes(state, topology) {
   const exterior = new Set(topology.nodes.map(n => n.id));
   const traversable = id => {
     const p = positions.get(id);
-    return p ? p.controller === 'host' && !p.contested : exterior.has(id) && !state.hostNodeContested?.includes(id);
+    return p ? securedHostPosition(state,id) : exterior.has(id) && !state.hostNodeContested?.includes(id);
   };
   const visited = new Set([topology.nexusId]);
   const queue = [topology.nexusId];
@@ -37,7 +38,7 @@ export function validateHostStep(state, topology, unit, destinationId) {
   if (!graph.get(unit.locationId)?.has(destinationId)) throw new Error('No physical Host access edge');
   const target = state.positions.find(p => p.id === destinationId);
   if (target && target.controller !== 'host') throw new Error('Enemy position requires explicit assault/claim');
-  if (target?.contested || state.hostNodeContested?.includes(destinationId)) throw new Error('Destination contested');
+  if ((target && (positionState(state,destinationId).contested || positionState(state,destinationId).controlChallenge)) || state.hostNodeContested?.includes(destinationId)) throw new Error('Destination contested');
   if (!reachableHostNodes(state, topology).has(destinationId)) throw new Error('No uncontested Host corridor from nexus');
 }
 

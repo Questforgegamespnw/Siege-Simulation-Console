@@ -1,76 +1,42 @@
-# Siege Simulation Console
+# Siege Simulation Console — Hold Until Dawn
 
-A lightweight HTML-based siege and mass-combat simulator for D&D 5e. **Hold Until Dawn** is the first scenario.
+Headless siege simulation and deterministic test harness for the Hold Until Dawn D&D 5e battlefield. The working engine includes local and macro movement, contact-based engagement eligibility, unified sector combat, position control/capture, and persistent standing orders. **No GUI or autonomous strategic AI is included.**
 
-## Current milestone: 0.5A — fortress data foundation
+## Run
 
-The project is **not yet a working siege simulator**. The CLI reports the starting East Wall condition; the phase resolver deliberately throws until implemented.
+From the repository root, with Node.js installed:
 
 ```powershell
-npm.cmd test
-npm.cmd run simulate
+npm test
 ```
 
-## Layout
+The public engine entry point is `src/engine/siege-engine.js`. For a state with active standing orders, use `resolveOrderedSiegePhase`; the direct integrated phase resolver rejects bypassing command arbitration.
 
-- `data/rules/` — numerical rules and modifiers (some provisional)
-- `data/units/` — unit type catalog and special ability definitions
-- `data/scenarios/hold-until-dawn/` — fortress geometry, reinforcement routes, initial control, waves, objectives
-- `src/lib/` — pure rule calculations (many stubs)
-- `src/engine/` — mutable runtime state and phase orchestration
-- `src/cli/` — headless demonstration
-- `tests/` — automated checks, including fortress topology
-- `dev/` — decisions, implementation notes and references
+## Documentation
+- `dev/` — detailed technical decisions and individual experiments.
 
-**Data separation:** static fortress positions and routes do not store changing control, occupants, or compromise status. Those are initialized from `deployment.json` and belong to runtime state.
+## Core engine principles
 
-**Known gaps:** unit-instance deployment, Host approach connections, special-unit mechanics, non-wall sector condition thresholds, and route-compromise attrition magnitude are not finalized. No values are invented to fill these gaps.
+- One sector-wide opposed CP comparison aggregates **eligible** engaged companies; engagement reach and frontage are determined by actual positions.
+- Cohesion at or below 25% removes effective defensive denial without automatically changing ownership.
+- Host penetration can create new contacts beyond a broken line without securing a Host reinforcement corridor.
+- Qualifying Coalition contested rallies may temporarily exceed ordinary allied capacity; already-advanced Host companies are not displaced.
+- Secured Host reinforcement corridors require actual Host control and must not be physically occupied by enemies or subject to a control challenge.
+- Orders remain active when blocked; legal movement and phase resolution remain authoritative.
 
-## Applying this ZIP to an existing repository
+## Project layout
 
-Copy the *contents* of this ZIP's top-level `siege-simulation-console-v0.5a` folder into the root of your cloned repository. Remove the obsolete root-level `data/*.json` files if present. Review differences and run tests before committing. Do not copy a `.git` directory; none is included.
+- `data/rules/` — canonical tunable combat, movement, and control rules.
+- `data/scenarios/hold-until-dawn/` — fortress, deployment, and topology.
+- `src/config/` — rules loading and validation.
+- `src/lib/` — rule predicates and calculations.
+- `src/engine/` — movement, command orchestration, combat, and phase state changes.
+- `tests/` — regression tests.
+- `experiments/` — deterministic scenario diagnostics.
+- `dev/` — technical design notes.
 
-MIT licensed. See `LICENSE`.
+## Known scope limits
 
-## Milestone 0.5B additions
-All known Coalition and Host unit instances are listed in `data/scenarios/hold-until-dawn/deployment.json`, initially at DB or HN. `host-topology.json` defines exterior physical approach/climb spaces, while `fire-coverage.json` defines sector-wide exterior firing lanes. The `waves.json` file was removed: units never spawn by wave. Unknown-quantity special units remain archetypes only. Inner-wall assault connectivity and Dawnstone access are explicitly unresolved; no runtime phase resolver is claimed.
+This is a headless alpha. It is not a complete dawn/victory lifecycle, general autonomous commander, finished special-unit implementation, or verified full-siege balance model. Optional experimental mechanics and historical scenario fixtures should not be mistaken for universally enabled defaults. Consult the latest milestone notes for specific caveats.
 
-Run `npm.cmd test` and `npm.cmd run simulate` in PowerShell.
-
-
-## Milestone 0.6A — Movement-only vertical slice
-
-`resolveMovementPhase(state, orders, { fortress, routes, hostTopology })` now handles
-Host stepwise exterior advance, empty outer-wall claims, Coalition DB-to-muster
-queued travel, and muster-to-inner deployment. The full `resolveSiegePhase`
-**still deliberately throws**: combat, attrition, contested assaults, inner access,
-route-compromise losses, and battle timing are not implemented.
-
-Movement orders: `{kind: "host-step"|"host-claim"|"coalition-route"|"coalition-local", unitId, to}`.
-A Coalition route order issued in phase N arrives in phase N+1. An arriving
-company cannot also receive a new order that same phase in this initial slice.
-Host exterior stages are treated as controlled by Host unless marked contested.
-No speculative inner-wall edges or siege victory logic are implemented.
-
-## Milestone 0.6B — Physical control slice
-
-- Added `src/lib/engagement.js` for cohesion-based physical-control eligibility and conventional climb-stage frontage.
-- Host outer-wall claims respect the 25% broken threshold without removing broken companies.
-- Added `coalition-counterattack` (marks a Host-held position contested) and `coalition-reclaim` (requires contested position, physical access and no effective Host defender).
-- Host reinforcement corridors cannot traverse contested Host positions.
-- **Not yet implemented:** combat, attrition, multi-company simultaneous assault resolution, automatic fallback staging, inner-wall access, full phase orchestration. The same-sector adjacency used for Coalition counterattacks is provisional and intentionally coarse.
-
-## Milestone 0.7A: explicit combat slice
-
-`src/engine/combat-resolver.js` resolves supplied engagement clusters with frozen-snapshot CP and simultaneous Cohesion losses. Exterior Archer coverage is sector-wide and each unit may participate once per phase. No automatic withdrawal, capture, or position movement occurs. This is **not** the full siege-phase resolver. See `dev/COMBAT_07A.md`.
-
-### 0.7B combat slice
-See `dev/COMBAT_07B.md` for the new `resolveBattlefieldCombat` API, provisional ranged attrition bands, and current limits. Run `npm.cmd test` on Windows PowerShell. Full phase orchestration remains deferred.
-
-## 0.7C provisional integrated test
-
-`resolveSiegePhase` connects movement to combat and introduces `host-assault-contact` without automatic capture. Run `PRINT_SIEGE_SCENARIOS=1 node --test tests/integrated-contact-07c.test.js` for the six-phase contact trace. This is not a complete siege phase engine; see `dev/INTEGRATED_07C.md`.
-
-## 0.7D — Unified sector combat
-
-Sector combat now aggregates physically engaged Host forces across inner and outer defensive positions into **one opposed CP comparison** per sector. Inner Archers contacted by Harpies or other Host switch to 60% melee CP; uncontacted inner Archers can provide 80% support with an explicitly clear lane. Exterior approach/climb fire remains one-sided and distinct. See `dev/UNIFIED_SECTOR_07D.md` for test scenarios and limitations. Harpy interior movement and full siege resolution are **not** implemented yet.
+MIT licensed; see `LICENSE`.

@@ -106,5 +106,56 @@
     "Compromised routes remain traversable and impose an AR-mitigated attrition penalty; magnitude is TBD.",
     "Local access is not permission to enter hostile-controlled positions for free.",
     "The specific Host climbing/entry connections remain to be defined before Host movement resolution."
-  ]
+  ],
+  "macroTopology": {
+    "scenario": "hold-until-dawn",
+    "travelPhasesPerEdge": 1,
+    "zones": [
+      "west-wall",
+      "gatehouse",
+      "east-wall",
+      "residential",
+      "dawnstone",
+      "deep-barracks"
+    ],
+    "surfaceEdges": [
+      [
+        "west-wall",
+        "gatehouse"
+      ],
+      [
+        "gatehouse",
+        "east-wall"
+      ],
+      [
+        "west-wall",
+        "residential"
+      ],
+      [
+        "gatehouse",
+        "residential"
+      ],
+      [
+        "gatehouse",
+        "dawnstone"
+      ],
+      [
+        "east-wall",
+        "dawnstone"
+      ],
+      [
+        "residential",
+        "dawnstone"
+      ]
+    ],
+    "tunnelHub": "deep-barracks",
+    "tunnelSpokes": [
+      "west-wall",
+      "gatehouse",
+      "east-wall",
+      "residential",
+      "dawnstone"
+    ],
+    "notes": "Surface travel anchors to inner compartments, not muster. Tunnel travel anchors to muster points and Deep Barracks. Tunnel compartment capacity deferred."
+  }
 }

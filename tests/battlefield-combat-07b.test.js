@@ -11,7 +11,7 @@ const coalitionTypes=json('../data/units/coalition.json');
 const hostTypes=json('../data/units/host.json');
 const combatRules=json('../data/rules/combat.json');
 const rangedRules=json('../data/rules/ranged-fire.json');
-const config={fortress,fireCoverage,coalitionTypes,hostTypes,combatRules,rangedRules};
+const config={fortress,fireCoverage,coalitionTypes,hostTypes,combatRules,rangedRules,engagementReach:'legacy-sector'};
 const u=(id,faction,typeId,locationId,cohesion=100)=>({id,faction,typeId,locationId,cohesion});
 const state=(...units)=>({phase:6,units,events:[]});
 const result=(s,extra={})=>resolveBattlefieldCombat(s,{...config,...extra});

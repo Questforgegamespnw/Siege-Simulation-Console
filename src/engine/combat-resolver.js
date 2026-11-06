@@ -1,3 +1,4 @@
+import {defaultRules} from '../config/rules.js';
 import { effectiveCP } from '../lib/combat.js';
 import { baseLosses, applyAttrition } from '../lib/attrition.js';
 import { exteriorCoverageZone, canFireExterior } from '../lib/coverage.js';
@@ -9,7 +10,7 @@ import { exteriorCoverageZone, canFireExterior } from '../lib/coverage.js';
  * Exterior target automatically recruits eligible archers in that sector, once per phase.
  * Engagement discovery and physical-control updates belong to later orchestration.
  */
-export function resolveCombatPhase(state, clusters, {coalitionTypes, hostTypes, combatRules, fireCoverage}) {
+export function resolveCombatPhase(state, clusters, {coalitionTypes, hostTypes, combatRules, fireCoverage, modifierRules = defaultRules.modifiers}) {
   const next = structuredClone(state);
   next.events ??= [];
   const units = new Map(next.units.map(u => [u.id, u]));
@@ -39,7 +40,7 @@ export function resolveCombatPhase(state, clusters, {coalitionTypes, hostTypes, 
       engagedInMelee: cluster.engagedUnitIds?.includes(id), clearLane: cluster.clearLane !== false
     }) ? 'ranged' : 'normal');
     const cp = id => effectiveCP(units.get(id), definitions.get(units.get(id).typeId), {
-      mode: modeFor(id), suppressed: Boolean(cluster.suppressed)
+      mode: modeFor(id), suppressed: Boolean(cluster.suppressed), rules:{combat:combatRules,modifiers:modifierRules}
     });
     const coalitionCP = coal.reduce((sum,id) => sum + cp(id), 0);
     const hostCP = host.reduce((sum,id) => sum + cp(id), 0);
@@ -51,7 +52,7 @@ export function resolveCombatPhase(state, clusters, {coalitionTypes, hostTypes, 
         const def = definitions.get(u.typeId);
         const mode = modeFor(id);
         // Supporting ranged archers use 90% AR only when not in melee.
-        const ar = (u.typeId === 'archer' && ['ranged','inner-support'].includes(mode)) ? 0.9 : def.baseAR;
+        const ar = (u.typeId === 'archer' && ['ranged','inner-support'].includes(mode)) ? modifierRules.rangedSupportAR : def.baseAR;
         const change = applyAttrition(u, cluster.supportImmune && ['ranged','inner-support'].includes(mode) ? 0 : base, ar);
         changes.push(change);
       }

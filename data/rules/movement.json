@@ -29,13 +29,12 @@
   "rangedCoverage": {
     "outerArcherSectorWide": true,
     "contributionsPerUnitPerPhase": 1,
-    "innerExteriorFire": false,
-    "implementationStatus": "data contract only"
+    "innerExteriorFire": "conditional-blind-volley"
   },
   "hostAssaultFrontage": {
     "conventionalCompaniesPerOuterPosition": 3,
     "singleEntitiesExempt": true,
-    "enforcement": "climbing staging occupancy; full engaged frontage awaits combat resolver"
+    "enforcement": "climbing staging and engaged contact frontage enforced"
   },
   "counterattack": {
     "declaringCounterattackContestsHostPosition": true,

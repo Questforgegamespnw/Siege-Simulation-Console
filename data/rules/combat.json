@@ -41,5 +41,7 @@
   "notes": [
     "Ratio bands represent base Cohesion loss before individual Attrition Resistance.",
     "Single Entity Units do not consume conventional assault slots but require plausible physical access."
-  ]
+  ],
+  "captureHostCPMultiplier": 0.5,
+  "blindVolleyCPMultiplier": 0.5
 }

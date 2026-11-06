@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createInitialState} from '../src/engine/state.js';
+import {resolveBattlefieldCombat} from '../src/engine/battlefield-combat.js';
+import {resolveMovementPhase} from '../src/engine/movement-resolver.js';
+const j=p=>JSON.parse(readFileSync(new URL(p,import.meta.url)));
+const cfg={fortress:j('../data/scenarios/hold-until-dawn/fortress.json'),routes:j('../data/scenarios/hold-until-dawn/routes.json'),hostTopology:j('../data/scenarios/hold-until-dawn/host-topology.json'),deployment:j('../data/scenarios/hold-until-dawn/deployment.json'),fireCoverage:j('../data/scenarios/hold-until-dawn/fire-coverage.json'),coalitionTypes:j('../data/units/coalition.json'),hostTypes:j('../data/units/host.json'),combatRules:j('../data/rules/combat.json'),rangedRules:j('../data/rules/ranged-fire.json'),innerSupportClearLanes:{'east-wall':true},engagementReach:'frontage',swarmerReinforcement:true};
+function setup(){const s=createInitialState(cfg),sw=s.units.filter(u=>u.typeId==='swarmer');for(const u of sw)u.locationId='WWOP_1_APP';sw.slice(0,3).forEach(u=>{u.locationId='EWOP_1';u.action='climb'});sw[3].locationId='EWOP_1_CLM';sw[4].locationId='EWOP_1_APP';const [front,back]=s.units.filter(u=>u.typeId==='men-at-arms');front.locationId='EWOP_1';back.locationId='EWIP_1';s.units.find(u=>u.typeId==='archer').locationId='EWIP_2';return {s,sw,front,back};}
+test('climbing frontline is 30% CP, while reserves are excluded',()=>{const {s,sw}=setup();const r=resolveBattlefieldCombat(s,cfg);assert.equal(r.melee[0].hostCP,40.5);assert.deepEqual(r.discovered.melee[0].host,sw.slice(0,3).map(u=>u.id));});
+test('climbing attrition is post-combat replenished from contiguous rear only',()=>{const {s,sw}=setup();const r=resolveBattlefieldCombat(s,cfg);assert.ok(r.replacements.length);for(const u of sw.slice(0,3))assert.equal(r.state.units.find(x=>x.id===u.id).cohesion,100);assert.ok(r.state.units.find(x=>x.id===sw[4].id).cohesion<100);});
+test('swap occurs before climbing combat without changing either cohesion',()=>{const {s,front,back}=setup();front.cohesion=52;const moved=resolveMovementPhase(s,[{kind:'local-swap',unitId:front.id,withUnitId:back.id}],cfg);assert.equal(moved.units.find(u=>u.id===front.id).cohesion,52);assert.equal(moved.units.find(u=>u.id===back.id).locationId,'EWOP_1');const r=resolveBattlefieldCombat(moved,cfg);assert.equal(r.melee[0].hostCP,40.5);});

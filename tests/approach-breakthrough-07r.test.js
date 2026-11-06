@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const results=JSON.parse(readFileSync(new URL('../experiments/approach-breakthrough-results-07r.json',import.meta.url)));
+test('32 route-driven configurations finish 16 phases without resolver exceptions',()=>{assert.equal(results.length,32);for(const r of results){assert.equal(r.failure,null);assert.equal(r.rows.length,16);assert.deepEqual(r.rows.map(x=>x.phase),Array.from({length:16},(_,i)=>i+1));}});
+test('all runs begin with exterior approach, not prepositioned climbing or wall combat',()=>{for(const r of results){assert.equal(r.rows[0].hostAtApproach,3);assert.equal(r.rows[0].hostClimbing,0);assert.equal(r.rows[0].hostOuter,0);}});
+test('total Swarmer strength never increases between phases',()=>{for(const r of results){let last=3000;for(const row of r.rows){assert.ok(row.hostTotalCohesion<=last+1e-7,JSON.stringify({cp:r.cp,phase:row.phase}));last=row.hostTotalCohesion;}}});
+test('reinforcement disabled means no replacement transfers',()=>{for(const r of results.filter(r=>!r.replenish))assert.ok(r.rows.every(x=>x.replacements===0));});
+test('reinforcement enabled transfers finite strength in actual contact',()=>{for(const r of results.filter(r=>r.replenish))assert.ok(r.rows.some(x=>x.replacements>0));});
+test('Coalition rotation occurs only in designated swap cases',()=>{for(const r of results){const count=r.rows.reduce((n,x)=>n+x.swaps,0);if(!r.rotate)assert.equal(count,0);else assert.ok(count<=1);}});
+test('an open outer flank is captured only after exterior approach',()=>{for(const r of results.filter(r=>r.openFlank))assert.equal(r.firstOuterCapture,4);});

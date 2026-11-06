@@ -8,7 +8,8 @@ export function createInitialState({ fortress, deployment, hostTopology }) {
       ...structuredClone(position),
       controller: initialControl.get(position.id)?.controller ?? null,
       positionThreat: initialControl.get(position.id)?.positionThreat ?? 0,
-      contested: false,
+      contested: false, // legacy serialized field; not authoritative for physical contestation
+      controlChallenge: false,
       occupantUnitIds: [],
     })),
     units: structuredClone(deployment.units ?? []),

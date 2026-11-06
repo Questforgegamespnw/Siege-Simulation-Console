@@ -23,7 +23,7 @@ test('all defensive positions begin Coalition-owned and empty',()=>{
 test('Host Nexus and approach/climb graph are well formed',()=>{
  assert.equal(f.positions.find(p=>p.id==='HN').zone,'host-reserve');
  const outer=f.positions.filter(p=>p.zone==='outer');assert.equal(outer.length,12);
- assert.equal(h.nodes.length,25);assert.equal(h.edges.length,36);
+ assert.equal(h.nodes.length,28);assert.equal(h.edges.length,42);
  const ids=new Set([...f.positions.map(p=>p.id),...h.nodes.map(n=>n.id)]);
  for(const e of h.edges){assert.ok(ids.has(e.from),e.from);assert.ok(ids.has(e.to),e.to);}
  for(const p of outer){assert.ok(h.edges.some(e=>e.from==='HN'&&e.to===p.id+'_APP'));assert.ok(h.edges.some(e=>e.from===p.id+'_APP'&&e.to===p.id+'_CLM'));assert.ok(h.edges.some(e=>e.from===p.id+'_CLM'&&e.to===p.id));}

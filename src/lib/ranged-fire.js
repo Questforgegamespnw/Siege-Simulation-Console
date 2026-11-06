@@ -1,3 +1,4 @@
+import {defaultRules} from '../config/rules.js';
 import {effectiveCP} from './combat.js';
 import {applyAttrition} from './attrition.js';
 
@@ -13,7 +14,7 @@ export function rangedBaseLoss(rangedCP, exposedMass, bands) {
   if (!band) throw new Error('Missing ranged attrition band');
   return {ratio, hostLoss:band.hostLoss};
 }
-export function resolveExteriorFire(state, engagements, {coalitionTypes, hostTypes, rangedRules}) {
+export function resolveExteriorFire(state, engagements, {coalitionTypes, hostTypes, rangedRules,combatRules = defaultRules.combat,modifierRules = defaultRules.modifiers}) {
   const next = structuredClone(state);
   next.events ??= [];
   const byId = new Map(next.units.map(u=>[u.id,u]));
@@ -29,7 +30,7 @@ export function resolveExteriorFire(state, engagements, {coalitionTypes, hostTyp
       committed.add(u.id);
     }
     if (archers.some(u=>u.typeId!=='archer')) throw new Error('Exterior firing unit must be an archer');
-    const rangedCP=archers.reduce((sum,u)=>sum+effectiveCP(u,types.get(u.typeId),{mode:'ranged',suppressed:Boolean(e.suppressed)}),0);
+    const rangedCP=archers.reduce((sum,u)=>sum+effectiveCP(u,types.get(u.typeId),{mode:e.archerModes?.[u.id] ?? 'ranged',suppressed:Boolean(e.suppressed),rules:{combat:combatRules,modifiers:modifierRules}}),0);
     const exposedMass=targets.reduce((sum,u)=>sum+targetMass(u,types.get(u.typeId)),0);
     const band=rangedBaseLoss(rangedCP,exposedMass,rangedRules.bands);
     const changes=targets.map(u=>applyAttrition(u,band.hostLoss,types.get(u.typeId).baseAR));
